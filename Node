@@ -8,8 +8,6 @@ if exists curl; then
 else
   sudo apt install curl -y < "/dev/null"
 fi
-curl -s https://api.nodes.guru/logo.sh | bash
-echo "==================================================="
 sleep 2
 sudo apt update -y && sudo apt install curl git tmux python3 python3-venv python3-dev build-essential libgmp-dev pkg-config libssl-dev -y
 sudo curl https://sh.rustup.rs -sSf | sh -s -- -y
