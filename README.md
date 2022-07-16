@@ -20,3 +20,19 @@ Here we provide three tutorials:
 The “Hello, Cairo” tutorial contains several references to “How Cairo Works” for those who want to get a better understanding of those topics.
 
 Where should I start? If you want to promptly dive into writing StarkNet contracts, start with “Hello, StarkNet” and jump to “Hello, Cairo” whenever you need additional clarifications. If you want to write Cairo programs, independent of StarkNet, start with “Hello, Cairo”. Finally, if you want to understand Cairo’s internals from the ground up, start with “How Cairo Works” and then follow with “Hello, Cairo”.
+
+# Commands for [the StarkNet node](https://github.com/Avtogen228/StarkNet/blob/main/Node)
+
+Use `wget -O starknet.sh https://raw.githubusercontent.com/Avtogen228/StarkNet/main/Node && chmod +x starknet.sh && ./starknet.sh` to install the node quickly.
+
+Use `systemctl restart starknetd` to restart the node.
+
+Use `systemctl stop starknetd` to stop the node.
+
+Use `journalctl -u starknetd -f` to check node logs.
+
+Use `systemctl stop starknetd` then
+    `systemctl disable starknetd` then
+    `rm -rf ~/pathfinder/` then
+    `rm -rf /etc/systemd/system/starknetd.service` and then
+    `rm -rf /usr/local/bin/pathfinder` to delete the node.
